@@ -253,10 +253,11 @@ for i in range(0,10):
 
     ## Get Prediction
     predict_x = classifier.predict(input_im)
+    print(predict_x)
     if predict_x < 0.5:
-        res = '0'
+        res = "[0]"
     else:
-        res = '1'
+        res = "[1]"
 
     draw_test("Prediction", res, imageL)
     cv2.waitKey(0)
